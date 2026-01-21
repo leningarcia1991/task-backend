@@ -8,13 +8,13 @@ import { IsBoolean, IsOptional, IsString } from "class-validator";
 export class UpdateTaskDto {
   @IsString()
   @IsOptional()
-  title?: string;
+    title?: string;
 
   @IsString()
   @IsOptional()
-  description?: string;
+    description?: string;
 
   @IsBoolean()
   @IsOptional()
-  completed?: boolean;
+    completed?: boolean;
 }

@@ -14,7 +14,7 @@ export function errorMiddleware(err: any, req: Request, res: Response, next: Nex
   if (Array.isArray(err)) { // errores de class-validator
     return res.status(400).json({
       message: "Validation failed",
-      errors: err.map(e => Object.values(e.constraints).join(", ")),
+      errors: err.map((e) => Object.values(e.constraints).join(", ")),
     });
   }
   if (err instanceof AppError) {

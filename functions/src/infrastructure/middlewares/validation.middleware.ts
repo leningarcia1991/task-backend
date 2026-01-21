@@ -36,7 +36,7 @@ export function validateBody<T extends object>(dtoClass: new () => T) {
  * Throws VALIDATION_ERROR on failure.
  *
  * @param dtoClass
- * @returns
+ * @return
  **/
 export function validateParams<T extends object>(dtoClass: new () => T) {
   return async (req: Request, _res: Response, next: NextFunction) => {
@@ -62,7 +62,7 @@ export function validateParams<T extends object>(dtoClass: new () => T) {
  */
 function buildValidationError(errors: unknown) {
   const messages = (errors as ValidationError[])
-    .map(err => Object.values(err.constraints ?? {}).join(", "))
+    .map((err) => Object.values(err.constraints ?? {}).join(", "))
     .join("; ");
 
   return new AppError(messages, 400, "VALIDATION_ERROR");

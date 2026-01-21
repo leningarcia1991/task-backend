@@ -36,7 +36,7 @@ export function authMiddleware(
     // Attach user info to request object
     req.user = {
       id: decoded.id,
-      email: decoded.email
+      email: decoded.email,
     };
 
     next();

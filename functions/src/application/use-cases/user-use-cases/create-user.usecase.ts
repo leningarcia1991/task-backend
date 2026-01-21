@@ -7,17 +7,17 @@ import { User } from "../../../domain/entities/user.entity";
  * Logic independent of any framework.
  */
 export class CreateUserUseCase {
-    // Dependency injection of the UserRepository
-    constructor(private userRepository: UserRepository) {}
-    // Execute the use case to create a new user
-    async execute(email: string): Promise<User> {
-        const existingUser = await this.userRepository.findByEmail(email);
-        if (existingUser) {
-            return existingUser;
-        }
-        return this.userRepository.create({
-            email,
-            createdAt: new Date(),
-        });
+  // Dependency injection of the UserRepository
+  constructor(private userRepository: UserRepository) {}
+  // Execute the use case to create a new user
+  async execute(email: string): Promise<User> {
+    const existingUser = await this.userRepository.findByEmail(email);
+    if (existingUser) {
+      return existingUser;
     }
+    return this.userRepository.create({
+      email,
+      createdAt: new Date(),
+    });
+  }
 }

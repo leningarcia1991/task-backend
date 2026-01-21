@@ -12,8 +12,8 @@ const router = Router();
  * @param {CreateUserDto} request.body.required - User creation data
  */
 router.post("/",
-    validateBody(CreateUserDto),
-    UserController.create
+  validateBody(CreateUserDto),
+  UserController.create
 );
 /**
  * @route GET /user/:email
@@ -21,8 +21,8 @@ router.post("/",
  * @param {LoginUserDto} request.params.required - User email parameter
  */
 router.get("/:email",
-    validateParams(LoginUserDto),
-    UserController.getByEmail
+  validateParams(LoginUserDto),
+  UserController.getByEmail
 );
 
 export default router;

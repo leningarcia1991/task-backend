@@ -11,8 +11,8 @@ const router = Router();
  * @param {LoginUserDto} request.body.required - User login credentials
  */
 router.post("/",
-    validateBody(LoginUserDto),
-    AuthController.login
+  validateBody(LoginUserDto),
+  AuthController.login
 );
 
 export default router;

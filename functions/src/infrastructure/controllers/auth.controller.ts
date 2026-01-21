@@ -14,7 +14,7 @@ export class AuthController {
   static async login(req: Request, res: Response): Promise<Response> {
     // Extract validated data from the request
     const { email } = req.body;
-     // Get tasks using the use case
+    // Get tasks using the use case
     const user = await getUserUseCase.execute(email);
     if (!user) throw new AppError("Invalid credentials", 401, "UNAUTHORIZED");
 

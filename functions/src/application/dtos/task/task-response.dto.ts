@@ -9,13 +9,13 @@ export class TaskResponseDto {
   description: string;
   completed: boolean;
   createdAt: Date;
-    constructor(
-       task: { id: string; title: string; description: string; completed: boolean; createdAt: Date }
-    ) {
-        this.id = task.id;
-        this.title = task.title;
-        this.description = task.description;
-        this.completed = task.completed;
-        this.createdAt = task.createdAt;
-    }
+  constructor(
+    task: { id: string; title: string; description: string; completed: boolean; createdAt: Date }
+  ) {
+    this.id = task.id;
+    this.title = task.title;
+    this.description = task.description;
+    this.completed = task.completed;
+    this.createdAt = task.createdAt;
+  }
 }
