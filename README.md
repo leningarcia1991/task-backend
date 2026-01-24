@@ -14,7 +14,7 @@ Backend servless for tasks management, built with Node.js, TypeScript, Express a
 * **Linting:** ESLint
 * **CI/CD:** GitHub Actions (CI/CD)
 ## Project structure
-
+```text
 task-backend/
 ├── functions/
 │   ├── src/
@@ -50,7 +50,7 @@ task-backend/
 ├── .firebaserc
 ├── firebase.json
 └── README.md
-
+```
 ## Architecture
 
 The project follows a hexagonal architecture (Clean architecture), the domain layer is framework-agnostic and does not depend on Firebase or Express.
