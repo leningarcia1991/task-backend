@@ -74,13 +74,13 @@ This allows for:
 | Method | Endpoint | Description  | Authentication  |
 | :--- | :--- | :--- | :--- |
 | `GET` | `/api/health` | Check the server status | Public |
-| `POST` | `/api/auth/login` | JWT Login and Delivery | Public |
-| `POST` | `/api/auth/register` | Registration of new users | **Private (JWT)** |
-| `GET` | `/api/tasks` | It retrieves all user tasks. | **Private (JWT)** |
+| `POST` | `/api/auth` | JWT Login and Delivery | Public |
+| `POST` | `/api/users` | Registration of new users | **Private (JWT)** |
+| `GET` | `/api/users` | Gets a user information | **Private (JWT)** |
 | `POST` | `/api/tasks` | Create a new task | **Private (JWT)** |
+| `GET` | `/api/tasks/:email` | It retrieves all user tasks. | **Private (JWT)** |
 | `PUT` | `/api/tasks/:id` | Update an existing task | **Private (JWT)** |
 | `DELETE` | `/api/tasks/:id` | Delete a task | **Private (JWT)** |
-| `GET` | `/api/users/me` | Gets the current user's profile | **Private (JWT)** |
 
 ## Installation and deploy
 
