@@ -29,7 +29,7 @@ app.use("/auth", authRoutes);
 
 // Protected routes (JWT required)
 app.use("/tasks", authMiddleware, taskRoutes);
-app.use("/users", authMiddleware, userRoutes);
+app.use("/users", userRoutes);
 
 // Global error handler
 app.use(errorMiddleware);
